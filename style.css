@@ -1,0 +1,116 @@
+body {
+  background:
+      radial-gradient(circle closest-side at 60% 43%, #e5e0de 26%, rgba(238,213,214,0) 27%),
+      radial-gradient(circle closest-side at 40% 43%, #e5e0de 26%, rgba(238,213,214,0) 27%),
+      radial-gradient(circle closest-side at 40% 22%, #f7cbce 45%, rgba(221,51,85,0) 46%),
+      radial-gradient(circle closest-side at 60% 22%, #f7cbce 45%, rgba(221,51,85,0) 46%),
+      radial-gradient(circle closest-side at 50% 35%, #f7cbce 30%, rgba(221,51,85,0) 31%),
+
+      radial-gradient(circle closest-side at 60% 43%, #e5e0de 26%, rgba(238,213,214,0) 27%) 50px 50px,
+      radial-gradient(circle closest-side at 40% 43%, #e5e0de 26%, rgba(238,213,214,0) 27%) 50px 50px,
+      radial-gradient(circle closest-side at 40% 22%, #e5e0de 45%, rgba(221,51,85,0) 46%) 50px 50px,
+      radial-gradient(circle closest-side at 60% 22%, #e5e0de 45%, rgba(221,51,85,0) 46%) 50px 50px,
+      radial-gradient(circle closest-side at 50% 35%, #e5e0de 30%, rgba(221,51,85,0) 31%) 50px 50px;
+  background-color: #e5e0de;
+  background-size: 100px 100px;
+  font-family: 'Lato', sans-serif;
+}
+
+.centered {
+  width: 100%;
+  margin: 30vh auto;
+  text-align: center;
+}
+
+.centered h4 {
+  color: #FFFFFF;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.no {
+  background-color: #cef5ef;
+  color: #FFFFFF;
+  pointer-events: none;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px -2px rgba(255, 0, 0, 0.5);
+}
+
+.yes {
+  background-color: #cef5ef;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px -2px rgba(255, 0, 0, 0.5);
+}
+
+.answer--yes,
+.answer--no {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.answer--yes img,
+.answer--no img {
+  width: 80%; /* Adjust the width as needed */
+  max-width: 500px; /* Limit the maximum width */
+  height: auto;
+}
+
+.answer--yes {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 20px; /* Add some padding around the image */
+  border-radius: 10px; /* Add border radius */
+}
+
+.answer--no {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  padding: 20px; /* Add some padding around the image */
+  border-radius: 10px; /* Add border radius */
+}
+
+input.yes[type=checkbox]:checked ~ .answer--yes {
+  visibility: visible;
+  opacity: 1;
+}
+
+input.no[type=checkbox]:checked ~ .answer--no {
+  visibility: visible;
+  opacity: 1;
+}
+
+img {
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 90%; /* Set the width to 90% of the container width */
+  max-width: 800px; /* Limit the maximum width to 800px */
+  height: auto; /* Maintain aspect ratio */
+}
